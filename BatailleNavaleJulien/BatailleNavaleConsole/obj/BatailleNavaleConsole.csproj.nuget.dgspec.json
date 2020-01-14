@@ -1,21 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\pauld\\Documents\\ESSTIN-POLYTECH\\5A\\C#\\Bataille-Navale\\BatailleNavaleJulien\\BatailleNavaleConsole\\BatailleNavaleConsole.csproj": {}
+    "C:\\Users\\Julien\\Documents\\Informatique\\Visual Studio 2019\\Cours\\Git\\Bataille-Navale\\BatailleNavaleJulien\\BatailleNavaleConsole\\BatailleNavaleConsole.csproj": {}
   },
   "projects": {
-    "C:\\Users\\pauld\\Documents\\ESSTIN-POLYTECH\\5A\\C#\\Bataille-Navale\\BatailleNavaleJulien\\BatailleNavaleConsole\\BatailleNavaleConsole.csproj": {
+    "C:\\Users\\Julien\\Documents\\Informatique\\Visual Studio 2019\\Cours\\Git\\Bataille-Navale\\BatailleNavaleJulien\\BatailleNavaleConsole\\BatailleNavaleConsole.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pauld\\Documents\\ESSTIN-POLYTECH\\5A\\C#\\Bataille-Navale\\BatailleNavaleJulien\\BatailleNavaleConsole\\BatailleNavaleConsole.csproj",
+        "projectUniqueName": "C:\\Users\\Julien\\Documents\\Informatique\\Visual Studio 2019\\Cours\\Git\\Bataille-Navale\\BatailleNavaleJulien\\BatailleNavaleConsole\\BatailleNavaleConsole.csproj",
         "projectName": "BatailleNavaleConsole",
-        "projectPath": "C:\\Users\\pauld\\Documents\\ESSTIN-POLYTECH\\5A\\C#\\Bataille-Navale\\BatailleNavaleJulien\\BatailleNavaleConsole\\BatailleNavaleConsole.csproj",
-        "packagesPath": "C:\\Users\\pauld\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pauld\\Documents\\ESSTIN-POLYTECH\\5A\\C#\\Bataille-Navale\\BatailleNavaleJulien\\BatailleNavaleConsole\\obj\\",
+        "projectPath": "C:\\Users\\Julien\\Documents\\Informatique\\Visual Studio 2019\\Cours\\Git\\Bataille-Navale\\BatailleNavaleJulien\\BatailleNavaleConsole\\BatailleNavaleConsole.csproj",
+        "packagesPath": "C:\\Users\\Julien\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Julien\\Documents\\Informatique\\Visual Studio 2019\\Cours\\Git\\Bataille-Navale\\BatailleNavaleJulien\\BatailleNavaleConsole\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\pauld\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Julien\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"

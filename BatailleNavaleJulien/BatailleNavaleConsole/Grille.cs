@@ -87,7 +87,7 @@ namespace BatailleNavaleConsole
             direction.Add(4); // gauche
 
             //supprime les direction impossible lorsque le point est proche du bord
-            if (ligneAleatoire - b.taille < 0) // direction =/= haut
+            if (ligneAleatoire + 1 - b.taille < 0) // direction =/= haut
             {
                 direction.Remove(1);
             }
@@ -99,10 +99,11 @@ namespace BatailleNavaleConsole
             {
                 direction.Remove(3);
             }
-            if (colonneAleatoire - b.taille < 0) // direction =/= gauche
+            if (colonneAleatoire + 1 - b.taille < 0) // direction =/= gauche
             {
                 direction.Remove(4);
             }
+
             #endregion
 
             #region Choix de la direction au hasard et remplissage de la grille
@@ -124,7 +125,10 @@ namespace BatailleNavaleConsole
                         }
                         else
                         {
-                            //ajouterBateau(b);
+                            //_grille[ligneAleatoire, colonneAleatoire] = 0;
+                            //AjouterBateau(b);
+                            //_grille[ligneAleatoire - i, colonneAleatoire] = 6;
+
                         }
 
                     }
