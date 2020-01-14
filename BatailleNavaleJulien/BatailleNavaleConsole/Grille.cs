@@ -50,9 +50,9 @@ namespace BatailleNavaleConsole
                     _grille[i, j] = 0;
                 }
             }
-            //AjouterBateau(porteavion);
-            //AjouterBateau(croiseur);
-            //AjouterBateau(contre_torpilleur);
+            AjouterBateau(porteavion);
+            AjouterBateau(croiseur);
+            AjouterBateau(contre_torpilleur);
             AjouterBateau(torpilleur);
 
         }
@@ -174,6 +174,7 @@ namespace BatailleNavaleConsole
             while (VerifierGrilleVide())
             {
                 int x, y;
+                Console.WriteLine("");
                 Console.WriteLine("Ecrire sous la forme : \"x y\" avec x et y entre 0 et " + (_lignes - 1));
                 string input = Console.ReadLine();
                 string[] split = input.Split(" ");
@@ -183,39 +184,39 @@ namespace BatailleNavaleConsole
 
                 Tirer(x, y);
                 VerifierBateauCoule();
-                //shoot(x, y);
                 Afficher();
             }
-            Console.WriteLine("end");
+            Console.WriteLine("");
+            Console.WriteLine("-----------------------");
+            Console.WriteLine("LA PARTIE EST TERMINEE");
+            Console.WriteLine("-----------------------");
         }
 
         public void Tirer(int x , int y)
         {
             if (_grille[x, y] == 0)
             {
+                Console.WriteLine("");
                 Console.WriteLine("MISS !!");
+                Console.WriteLine("");
             }
             else
             {
+                Console.WriteLine("");
                 Console.WriteLine("TOUCHE !!");
+                Console.WriteLine("");
                 _grille[x, y] = 0;
             }
         }
 
         public bool VerifierGrilleVide()
         {
-            bool grillevide = false;
-            for (int i = 0; i < _lignes; i++)
+            bool grillevide = true;
+            if (CState && TState && PaState && CTState)
             {
-                for (int j = 0; j < _lignes; j++)
-                {
-                    if (_grille[i, j] != 0)
-                    {
-                        grillevide = true;
-                    }
-                }
+                grillevide = false;
+                return grillevide;
             }
-            //Console.WriteLine("La partie est terminée");
             return grillevide;
         }
 
@@ -254,10 +255,29 @@ namespace BatailleNavaleConsole
             }
 
             // si il n'y a aucune case, la somme est égale à 0 donc le bateau est coulé
-            if (porteavion == 0) Console.WriteLine("Porte-Avion coulé");
-            if (croiseur == 0) Console.WriteLine("Croiseur coulé");
-            if (contre_torpilleur == 0) Console.WriteLine("Contre-Torpilleur coulé");
-            if (torpilleur == 0) Console.WriteLine("Torpilleur coulé");
+            if (porteavion == 0 && PaState != true)
+            {
+                Console.WriteLine("Porte-Avion coulé");
+                PaState = true;
+            }
+
+            if (croiseur == 0 && CState != true)
+            {
+                Console.WriteLine("Croiseur coulé");
+                CState = true;
+            }
+
+            if (contre_torpilleur == 0 && CTState != true)
+            {
+                Console.WriteLine("Contre-Torpilleur coulé");
+                CTState = true;
+            }
+
+            if (torpilleur == 0 && TState != true)
+            {
+                Console.WriteLine("Torpilleur coulé");
+                TState = true;
+            }
         }
 
         public void Afficher() // affiche la grille
@@ -272,73 +292,5 @@ namespace BatailleNavaleConsole
             }
             Console.WriteLine("");
         }
-
-        public void shoot(int x, int y)
-        {
-            if (_grille[x, y] != 0)
-            {
-                Console.WriteLine("Un bateau a été touché");
-                _grille[x, y] = 0;
-
-                int count5 = 0;
-                int count4 = 0;
-                int count3 = 0;
-                int count2 = 0;
-
-                for (int i = 0; i < x; i++)
-                {
-                    for (int j = 0; j < x; j++)
-                    {
-                        if (PaState == false && _grille[i, j] == 5)
-                            count5++;
-                        if (CState == false && _grille[i, j] == 4)
-                            count4++;
-                        if (CTState == false && _grille[i, j] == 3)
-                            count3++;
-                        if (TState == false && _grille[i, j] == 2)
-                            count2++;
-                    }
-                }
-
-                if (count5 == 0)
-                {
-                    Console.WriteLine("Le porte-avion a été coulé");
-                    PaState = true; // on indique que le porte avion est coulé
-                }
-                if (count4 == 0)
-                {
-                    Console.WriteLine("Le croiseur a été coulé");
-                    CState = true;
-                }
-                if (count3 == 0)
-                {
-                    Console.WriteLine("Le contre-torpilleur a été coulé");
-                    CTState = true;
-                }
-                if (count2 == 0)
-                {
-                    Console.WriteLine("Le torpilleur a été coulé");
-                    TState = true;
-                }
-            }
-            else
-            {
-                Console.WriteLine("Un tir dans le vide...");
-            }
-        }
-
-
-        public Boolean GameState()
-        {
-
-            while (PaState == false || CState == false || CTState == false || TState == false)
-            {
-                return false;
-            }
-
-            Console.WriteLine("La partie est finie");
-            return true;
-        }
-
     }
 }

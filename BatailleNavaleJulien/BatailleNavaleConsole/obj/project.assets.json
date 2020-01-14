@@ -15,11 +15,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Julien\\Documents\\Informatique\\Visual Studio 2019\\Cours\\BatailleNavale\\BatailleNavaleConsole\\BatailleNavaleConsole.csproj",
+      "projectUniqueName": "C:\\Users\\Julien\\Documents\\Informatique\\Visual Studio 2019\\Cours\\Git\\Bataille-Navale\\BatailleNavaleJulien\\BatailleNavaleConsole\\BatailleNavaleConsole.csproj",
       "projectName": "BatailleNavaleConsole",
-      "projectPath": "C:\\Users\\Julien\\Documents\\Informatique\\Visual Studio 2019\\Cours\\BatailleNavale\\BatailleNavaleConsole\\BatailleNavaleConsole.csproj",
+      "projectPath": "C:\\Users\\Julien\\Documents\\Informatique\\Visual Studio 2019\\Cours\\Git\\Bataille-Navale\\BatailleNavaleJulien\\BatailleNavaleConsole\\BatailleNavaleConsole.csproj",
       "packagesPath": "C:\\Users\\Julien\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Julien\\Documents\\Informatique\\Visual Studio 2019\\Cours\\BatailleNavale\\BatailleNavaleConsole\\obj\\",
+      "outputPath": "C:\\Users\\Julien\\Documents\\Informatique\\Visual Studio 2019\\Cours\\Git\\Bataille-Navale\\BatailleNavaleJulien\\BatailleNavaleConsole\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
