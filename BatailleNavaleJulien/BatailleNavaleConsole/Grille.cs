@@ -10,6 +10,7 @@ namespace BatailleNavaleConsole
         int _lignes;
         int _colonnes;
         int[,] _grille;
+        string[,] GrilleJoueur;
 
         Bateau porteavion = new Porte_avion();
         Bateau croiseur = new Croiseur();
@@ -42,6 +43,7 @@ namespace BatailleNavaleConsole
             _lignes = lignes;
             _colonnes = lignes;
             _grille = new int[lignes, lignes];
+            GrilleJoueur = new string[lignes, lignes];
 
             for (int i = 0; i < lignes; i++)
             {
@@ -50,6 +52,15 @@ namespace BatailleNavaleConsole
                     _grille[i, j] = 0;
                 }
             }
+
+            for (int i = 0; i < lignes; i++)
+            {
+                for (int j = 0; j < _colonnes; j++)
+                {
+                    GrilleJoueur[i, j] = "M";
+                }
+            }
+
             AjouterBateau(porteavion);
             AjouterBateau(croiseur);
             AjouterBateau(contre_torpilleur);
@@ -184,7 +195,7 @@ namespace BatailleNavaleConsole
 
                 Tirer(x, y);
                 VerifierBateauCoule();
-                Afficher();
+                AfficherGrilleJoueur();
             }
             Console.WriteLine("");
             Console.WriteLine("-----------------------");
@@ -192,13 +203,29 @@ namespace BatailleNavaleConsole
             Console.WriteLine("-----------------------");
         }
 
+        public void AfficherGrilleJoueur()
+        {
+            for (int i = 0; i < _lignes; i++)
+            {
+                Console.WriteLine("");
+                for (int j = 0; j < _colonnes; j++)
+                {
+                    Console.Write(GrilleJoueur[i, j] + ", ");
+                }
+            }
+            Console.WriteLine("");
+            Console.WriteLine(" les \"o\" correspondent à un tir touché");
+            Console.WriteLine(" les \"x\" correspondent à un tir raté");
+        }
         public void Tirer(int x , int y)
         {
+                        
             if (_grille[x, y] == 0)
             {
                 Console.WriteLine("");
-                Console.WriteLine("MISS !!");
+                Console.WriteLine("RATÉ !!");
                 Console.WriteLine("");
+                GrilleJoueur[x, y] = "x";
             }
             else
             {
@@ -206,6 +233,7 @@ namespace BatailleNavaleConsole
                 Console.WriteLine("TOUCHE !!");
                 Console.WriteLine("");
                 _grille[x, y] = 0;
+                GrilleJoueur[x, y] = "o";
             }
         }
 

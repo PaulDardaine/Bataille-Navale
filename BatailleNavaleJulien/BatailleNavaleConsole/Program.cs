@@ -12,7 +12,6 @@ namespace BatailleNavaleConsole
             g.Afficher();
             g.Jouer();
 
-            //g.Afficher();
         }
     }
 }
