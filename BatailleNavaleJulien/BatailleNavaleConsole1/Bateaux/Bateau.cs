@@ -4,7 +4,7 @@ using System.Text;
 
 namespace BatailleNavaleConsole.Bateaux
 {
-    public class Bateau
+    class Bateau
     {
         public int taille;
 

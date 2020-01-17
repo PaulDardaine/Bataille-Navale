@@ -1,0 +1,6 @@
+C:\Users\Julien\Documents\Informatique\Visual Studio 2019\Cours\Git\Bataille-Navale\BatailleNavaleJulien\BatailleNavaleConsole1\obj\Debug\BatailleNavaleConsole1.csprojAssemblyReference.cache
+C:\Users\Julien\Documents\Informatique\Visual Studio 2019\Cours\Git\Bataille-Navale\BatailleNavaleJulien\BatailleNavaleConsole1\bin\Debug\BatailleNavaleConsole1.exe.config
+C:\Users\Julien\Documents\Informatique\Visual Studio 2019\Cours\Git\Bataille-Navale\BatailleNavaleJulien\BatailleNavaleConsole1\bin\Debug\BatailleNavaleConsole1.exe
+C:\Users\Julien\Documents\Informatique\Visual Studio 2019\Cours\Git\Bataille-Navale\BatailleNavaleJulien\BatailleNavaleConsole1\bin\Debug\BatailleNavaleConsole1.pdb
+C:\Users\Julien\Documents\Informatique\Visual Studio 2019\Cours\Git\Bataille-Navale\BatailleNavaleJulien\BatailleNavaleConsole1\obj\Debug\BatailleNavaleConsole1.exe
+C:\Users\Julien\Documents\Informatique\Visual Studio 2019\Cours\Git\Bataille-Navale\BatailleNavaleJulien\BatailleNavaleConsole1\obj\Debug\BatailleNavaleConsole1.pdb

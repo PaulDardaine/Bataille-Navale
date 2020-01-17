@@ -94,5 +94,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BatailleNavaleConsole\BatailleNavaleConsole.csproj">
+      <Project>{5c3ca24f-ce34-4df5-b0fe-f8bda71544c8}</Project>
+      <Name>BatailleNavaleConsole</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

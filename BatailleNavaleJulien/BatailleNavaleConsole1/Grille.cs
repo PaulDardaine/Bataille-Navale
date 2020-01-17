@@ -5,7 +5,7 @@ using System.Text;
 
 namespace BatailleNavaleConsole
 {
-    public class Grille
+    class Grille
     {
         private int _lignes;
         private int _colonnes;
@@ -23,6 +23,7 @@ namespace BatailleNavaleConsole
         private bool CTState = false;
         private bool TState = false;
         private bool Explications = true;
+        static Random aleatoire = new Random();
 
         public Grille(int lignes, int colonnes)
         {
@@ -70,12 +71,13 @@ namespace BatailleNavaleConsole
 
         }
 
+        
+
         public void AjouterBateau(Bateau b)
         {
             #region Point aléatoire sur la grille
 
             // On prend un point aléatoire dans la grille
-            Random aleatoire = new Random();
             int ligneAleatoire = aleatoire.Next(_lignes);
             int colonneAleatoire = aleatoire.Next(_lignes);
 
@@ -246,7 +248,7 @@ namespace BatailleNavaleConsole
                 Console.WriteLine("Ecrire sous la forme : \"x y\" avec x et y entre 0 et " + (_lignes - 1));
                 string input = Console.ReadLine();
                 // On split pour récuperer les deux nombres taper par le joueur
-                string[] split = input.Split(" ");
+                string[] split = input.Split(' ');
                 
                 // On parse en int
                 x = Int32.Parse(split[0]);
