@@ -15,14 +15,25 @@ using System.Windows.Shapes;
 
 namespace BatailleNavaleGraphique
 {
-    /// <summary>
-    /// Logique d'interaction pour MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
         {
             InitializeComponent();
+            this.Closing += new System.ComponentModel.CancelEventHandler(MainWindow_Closing);
         }
+
+        void MainWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            Jeu NouvellePartie = new Jeu();
+            NouvellePartie.Show();
+        }
+
+
+        void NewGame_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
     }
 }

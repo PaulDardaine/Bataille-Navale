@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{57F633F0-4A2B-4966-8B2F-FED5CFF74E5C}</ProjectGuid>
+    <ProjectGuid>{C1692A69-D9FD-4061-BED5-01B38CBAB318}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>BatailleNavaleGraphique</RootNamespace>
     <AssemblyName>BatailleNavaleGraphique</AssemblyName>
@@ -55,6 +55,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Jeu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -62,6 +66,10 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Client.cs" />
+    <Compile Include="Jeu.xaml.cs">
+      <DependentUpon>Jeu.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -93,6 +101,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BatailleNavaleConsole\BatailleNavaleConsole.csproj">
+      <Project>{5c3ca24f-ce34-4df5-b0fe-f8bda71544c8}</Project>
+      <Name>BatailleNavaleConsole</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

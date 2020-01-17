@@ -5,8 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BatailleNavaleGraphique"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="Home" Height="450" Width="800">
+    <StackPanel>
+        <Label x:Name="Bienvenue" HorizontalAlignment="Center" VerticalAlignment="Center">Bienvenue</Label>
+
+        <Button x:Name="NouvellePartie" Click="NewGame_Click">Nouvelle partie</Button>
+        <Button x:Name="ChargerPartie">Charger une partie</Button>
+
+    </StackPanel>
 </Window>
