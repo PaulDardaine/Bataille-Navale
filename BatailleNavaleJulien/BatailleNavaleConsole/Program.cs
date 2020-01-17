@@ -7,7 +7,7 @@ namespace BatailleNavaleConsole
     {
         static void Main(string[] args)
         {
-            Grille g = new Grille(8);
+            Grille g = new Grille(6);
 
             g.Afficher();
             g.Jouer();

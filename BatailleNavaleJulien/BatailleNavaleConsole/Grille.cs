@@ -17,10 +17,10 @@ namespace BatailleNavaleConsole
         Bateau contre_torpilleur = new Contre_torpilleur();
         Bateau torpilleur = new Torpilleur();
 
-        public Boolean PaState = false;
-        public Boolean CState = false;
-        public Boolean CTState = false;
-        public Boolean TState = false;
+        public bool PaState = false;
+        public bool CState = false;
+        public bool CTState = false;
+        public bool TState = false;
 
         public Grille(int lignes, int colonnes)
         {
@@ -71,12 +71,26 @@ namespace BatailleNavaleConsole
         public void AjouterBateau(Bateau b)
         {
             #region Point aléatoire sur la grille
+
             Random aleatoire = new Random();
             int ligneAleatoire = aleatoire.Next(_lignes);
             int colonneAleatoire = aleatoire.Next(_lignes);
             //Console.WriteLine(ligneAleatoire + ";" + colonneAleatoire);
 
-            _grille[ligneAleatoire, colonneAleatoire] = b.taille; //inialise le point choisit au hasard par le num du bateau
+            if (_grille[ligneAleatoire, colonneAleatoire] == 0)
+            { 
+                _grille[ligneAleatoire, colonneAleatoire] = b.taille; //inialise le point choisit au hasard par le num du bateau
+            }
+            else
+            {
+                do
+                {
+                    ligneAleatoire = aleatoire.Next(_lignes);
+                    colonneAleatoire = aleatoire.Next(_lignes);
+                    //Console.WriteLine(ligneAleatoire + ";" + colonneAleatoire + "c");
+                } while (_grille[ligneAleatoire, colonneAleatoire] != 0);
+            }
+            
             #endregion
 
             #region Verifier Direction possible en fonction du point choisit
@@ -103,7 +117,6 @@ namespace BatailleNavaleConsole
             {
                 direction.Remove(4);
             }
-
             #endregion
 
             #region Choix de la direction au hasard et remplissage de la grille
