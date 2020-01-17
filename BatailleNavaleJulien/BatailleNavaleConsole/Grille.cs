@@ -10,7 +10,8 @@ namespace BatailleNavaleConsole
         int _lignes;
         int _colonnes;
         int[,] _grille;
-        string[,] GrilleJoueur;
+        string[,] _GrilleJoueur;
+        int _Compteur = 0;
 
         Bateau porteavion = new Porte_avion();
         Bateau croiseur = new Croiseur();
@@ -43,7 +44,7 @@ namespace BatailleNavaleConsole
             _lignes = lignes;
             _colonnes = lignes;
             _grille = new int[lignes, lignes];
-            GrilleJoueur = new string[lignes, lignes];
+            _GrilleJoueur = new string[lignes, lignes];
 
             for (int i = 0; i < lignes; i++)
             {
@@ -57,10 +58,10 @@ namespace BatailleNavaleConsole
             {
                 for (int j = 0; j < _colonnes; j++)
                 {
-                    GrilleJoueur[i, j] = "M";
+                    _GrilleJoueur[i, j] = " ";
                 }
             }
-
+            
             AjouterBateau(porteavion);
             AjouterBateau(croiseur);
             AjouterBateau(contre_torpilleur);
@@ -75,8 +76,7 @@ namespace BatailleNavaleConsole
             Random aleatoire = new Random();
             int ligneAleatoire = aleatoire.Next(_lignes);
             int colonneAleatoire = aleatoire.Next(_lignes);
-            //Console.WriteLine(ligneAleatoire + ";" + colonneAleatoire);
-
+            Console.WriteLine(ligneAleatoire + ";" + colonneAleatoire);
             if (_grille[ligneAleatoire, colonneAleatoire] == 0)
             { 
                 _grille[ligneAleatoire, colonneAleatoire] = b.taille; //inialise le point choisit au hasard par le num du bateau
@@ -126,22 +126,29 @@ namespace BatailleNavaleConsole
             {
                 Console.WriteLine("La taille de la grille est trop petite"); // impossible de placer le bateau
             }
-            else { 
+            else {
+                int compteur1 = 0;
+                int compteur2 = 0;
+                int compteur3 = 0;
+                int compteur4 = 0;
                 if (direction[directionRestante] == 1) //rempli vers le haut
                 {
-                    for(int i=0; i<b.taille; i++)
+                    for(int i=1; i<b.taille; i++)
                     {
-                        // si une des cases à remplir est deja occupé par un autre bateau, on relance la fonction
+                        compteur1++;
                         if (_grille[ligneAleatoire - i, colonneAleatoire] == 0)
                         {
                             _grille[ligneAleatoire - i, colonneAleatoire] = b.taille;
+                            
                         }
                         else
                         {
                             //_grille[ligneAleatoire, colonneAleatoire] = 0;
+                            //for (int j = 1; j < compteur1; j++)
+                            //{
+                            //    _grille[ligneAleatoire + j, colonneAleatoire] = 0;
+                            //}
                             //AjouterBateau(b);
-                            //_grille[ligneAleatoire - i, colonneAleatoire] = 6;
-
                         }
 
                     }
@@ -149,46 +156,65 @@ namespace BatailleNavaleConsole
 
                 else if (direction[directionRestante] == 2) //rempli vers le bas
                 {
-                    for (int i = 0; i < b.taille; i++)
+                    for (int i = 1; i < b.taille; i++)
                     {
+                        compteur2++;
                         if (_grille[ligneAleatoire + i, colonneAleatoire] == 0)
                         {
                             _grille[ligneAleatoire + i, colonneAleatoire] = b.taille;
                         }
                         else
                         {
-                            //ajouterBateau(b);
+                            //_grille[ligneAleatoire, colonneAleatoire] = 0;
+                            //for (int j = 1; j < compteur2; j++)
+                            //{
+                            //    _grille[ligneAleatoire - j, colonneAleatoire] = 0;
+                            //}
+                            //AjouterBateau(b);
                         }
                     }
                 }
 
                 else if (direction[directionRestante] == 3) //rempli vers la droite
                 {
-                    for (int i = 0; i < b.taille; i++)
+                    for (int i = 1; i < b.taille; i++)
                     {
+                        compteur3++;
                         if (_grille[ligneAleatoire, colonneAleatoire + i] == 0)
                         {
                             _grille[ligneAleatoire, colonneAleatoire + i] = b.taille;
+                            
                         }
                         else
                         {
-                            //ajouterBateau(b);
+                            //_grille[ligneAleatoire, colonneAleatoire] = 0;
+                            //for (int j = 1; j < compteur3; j++)
+                            //{
+                            //    _grille[ligneAleatoire, colonneAleatoire - j] = 0;
+                            //}
+                            //AjouterBateau(b);
                         }
                     }
                 }
 
                 else if (direction[directionRestante] == 4) //rempli vers la gauche
                 {
-                    for (int i = 0; i < b.taille; i++)
+                    for (int i = 1; i < b.taille; i++)
                     {
+                        compteur4++;
                         if (_grille[ligneAleatoire, colonneAleatoire - i] == 0)
                         {
                             _grille[ligneAleatoire, colonneAleatoire - i] = b.taille;
+                            
                         }
                         else
                         {
-                            //supprimer les cases déja ajoutés
-                            //ajouterBateau(b);
+                            //_grille[ligneAleatoire, colonneAleatoire] = 0;
+                            //for (int j = 1; j < compteur4; j++)
+                            //{
+                            //    _grille[ligneAleatoire, colonneAleatoire + j] = 0;
+                            //}
+                            //AjouterBateau(b);
                         }
                     }
                 }
@@ -227,22 +253,23 @@ namespace BatailleNavaleConsole
                 Console.WriteLine("");
                 for (int j = 0; j < _colonnes; j++)
                 {
-                    Console.Write(GrilleJoueur[i, j] + ", ");
+                    Console.Write(_GrilleJoueur[i, j] + ", ");
                 }
             }
             Console.WriteLine("");
             Console.WriteLine(" les \"o\" correspondent à un tir touché");
             Console.WriteLine(" les \"x\" correspondent à un tir raté");
+            Console.WriteLine(" Nombre de coups déjà joués : " + _Compteur);
         }
         public void Tirer(int x , int y)
         {
-                        
+            _Compteur++;            
             if (_grille[x, y] == 0)
             {
                 Console.WriteLine("");
                 Console.WriteLine("RATÉ !!");
                 Console.WriteLine("");
-                GrilleJoueur[x, y] = "x";
+                _GrilleJoueur[x, y] = "x";
             }
             else
             {
@@ -250,7 +277,7 @@ namespace BatailleNavaleConsole
                 Console.WriteLine("TOUCHE !!");
                 Console.WriteLine("");
                 _grille[x, y] = 0;
-                GrilleJoueur[x, y] = "o";
+                _GrilleJoueur[x, y] = "o";
             }
         }
 
