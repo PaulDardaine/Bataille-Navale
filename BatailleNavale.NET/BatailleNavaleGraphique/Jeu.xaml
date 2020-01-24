@@ -4,9 +4,79 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BatailleNavaleGraphique"
-        mc:Ignorable="d"
+        mc:Ignorable="d"    
         Title="Jeu" Height="450" Width="800">
+
+    <Grid x:Name="gr">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+    </Grid>
+
+
+
+
+
+
+
+
+    <!--
     <UniformGrid Rows="10" Columns="10">
-        <Button></Button>
+        <Button x:Name="_00"></Button>
+        <Button x:Name="_01"></Button>
+        <Button x:Name="_02"></Button>
+        <Button x:Name="_03"></Button>
+        <Button x:Name="_04"></Button>
+        <Button x:Name="_05"></Button>
+        <Button x:Name="_06"></Button>
+        <Button x:Name="_07"></Button>
+        <Button x:Name="_08"></Button>
+        <Button x:Name="_09"></Button>
+
+        <Button x:Name="_10" Click="B_Click"></Button>
+        <Button x:Name="_11" Click="B_Click"></Button>
+        <Button x:Name="_12" Click="B_Click"></Button>
+        <Button x:Name="_13" Click="B_Click"></Button>
+        <Button x:Name="_14" Click="B_Click"></Button>
+        <Button x:Name="_15" Click="B_Click"></Button>
+        <Button x:Name="_16" Click="B_Click"></Button>
+        <Button x:Name="_17" Click="B_Click"></Button>
+        <Button x:Name="_18" Click="B_Click"></Button>
+        <Button x:Name="_19" Click="B_Click"></Button>
+
+        <Button x:Name="_20"></Button>
+        <Button x:Name="_21"></Button>
+        <Button x:Name="_22"></Button>
+        <Button x:Name="_23"></Button>
+        <Button x:Name="_24"></Button>
+        <Button x:Name="_25"></Button>
+        <Button x:Name="_26"></Button>
+        <Button x:Name="_27"></Button>
+        <Button x:Name="_28"></Button>
+        <Button x:Name="_29"></Button>
+    
+
     </UniformGrid>
+    -->
 </Window>

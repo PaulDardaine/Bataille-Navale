@@ -4,3 +4,9 @@ C:\Users\Julien\Documents\Informatique\Visual Studio 2019\BatailleNavaleConsole\
 C:\Users\Julien\Documents\Informatique\Visual Studio 2019\BatailleNavaleConsole\obj\Debug\BatailleNavaleConsole.csprojAssemblyReference.cache
 C:\Users\Julien\Documents\Informatique\Visual Studio 2019\BatailleNavaleConsole\obj\Debug\BatailleNavaleConsole.exe
 C:\Users\Julien\Documents\Informatique\Visual Studio 2019\BatailleNavaleConsole\obj\Debug\BatailleNavaleConsole.pdb
+C:\Users\pauld\Documents\ESSTIN-POLYTECH\5A\C#\Bataille-Navale\BatailleNavale.NET\BatailleNavaleConsole\bin\Debug\BatailleNavaleConsole.exe.config
+C:\Users\pauld\Documents\ESSTIN-POLYTECH\5A\C#\Bataille-Navale\BatailleNavale.NET\BatailleNavaleConsole\bin\Debug\BatailleNavaleConsole.exe
+C:\Users\pauld\Documents\ESSTIN-POLYTECH\5A\C#\Bataille-Navale\BatailleNavale.NET\BatailleNavaleConsole\bin\Debug\BatailleNavaleConsole.pdb
+C:\Users\pauld\Documents\ESSTIN-POLYTECH\5A\C#\Bataille-Navale\BatailleNavale.NET\BatailleNavaleConsole\obj\Debug\BatailleNavaleConsole.exe
+C:\Users\pauld\Documents\ESSTIN-POLYTECH\5A\C#\Bataille-Navale\BatailleNavale.NET\BatailleNavaleConsole\obj\Debug\BatailleNavaleConsole.pdb
+C:\Users\pauld\Documents\ESSTIN-POLYTECH\5A\C#\Bataille-Navale\BatailleNavale.NET\BatailleNavaleConsole\obj\Debug\BatailleNavaleConsole.csprojAssemblyReference.cache

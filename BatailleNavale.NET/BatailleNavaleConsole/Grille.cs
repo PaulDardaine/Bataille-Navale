@@ -5,12 +5,12 @@ using System.Text;
 
 namespace BatailleNavaleConsole
 {
-    class Grille
+    public class Grille
     {
-        private int _lignes;
+        public int _lignes;
         private int _colonnes;
-        private int[,] _grille;
-        private string[,] _GrilleJoueur;
+        public int[,] _grille;
+        public string[,] _GrilleJoueur;
         private int _Compteur = 0;
 
         Bateau porteavion = new Porte_avion();
@@ -18,10 +18,10 @@ namespace BatailleNavaleConsole
         Bateau contre_torpilleur = new Contre_torpilleur();
         Bateau torpilleur = new Torpilleur();
 
-        private bool PaState = false;
-        private bool CState = false;
-        private bool CTState = false;
-        private bool TState = false;
+        public bool PaState = false;
+        public bool CState = false;
+        public bool CTState = false;
+        public bool TState = false;
         private bool Explications = true;
         static Random aleatoire = new Random();
 
@@ -73,7 +73,7 @@ namespace BatailleNavaleConsole
 
 
 
-        public void AjouterBateau(Bateau b)
+        void AjouterBateau(Bateau b)
         {
             #region Point aléatoire sur la grille
 
