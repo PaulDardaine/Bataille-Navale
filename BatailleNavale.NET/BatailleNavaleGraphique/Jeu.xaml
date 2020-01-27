@@ -5,10 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BatailleNavaleGraphique"
         mc:Ignorable="d"    
-        Title="Jeu" Height="450" Width="800">
+        Title="Jeu" Height="auto" Width="auto">
 
     <Grid x:Name="gr">
-        <Grid.RowDefinitions>
+
+        <Grid.Background>
+            <ImageBrush ImageSource="wallpaper2.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
+
+        <Grid.RowDefinitions >
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />

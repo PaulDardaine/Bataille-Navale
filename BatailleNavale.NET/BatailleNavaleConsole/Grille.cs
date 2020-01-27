@@ -10,7 +10,7 @@ namespace BatailleNavaleConsole
         public int _lignes;
         private int _colonnes;
         public int[,] _grille;
-        public string[,] _GrilleJoueur;
+        private string[,] _GrilleJoueur;
         private int _Compteur = 0;
 
         Bateau porteavion = new Porte_avion();

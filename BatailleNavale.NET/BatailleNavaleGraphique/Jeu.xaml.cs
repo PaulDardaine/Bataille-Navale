@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -12,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using BatailleNavaleConsole;
+using Microsoft.Win32;
 
 namespace BatailleNavaleGraphique
 {
@@ -22,7 +24,6 @@ namespace BatailleNavaleGraphique
     {
 
         private Grille _grilleJeu;
-        private Grille _grilleJoueur;
         public Jeu()
         {
             InitializeComponent();
@@ -35,6 +36,7 @@ namespace BatailleNavaleGraphique
                 {
                     Button b = new Button();
                     b.Margin = new Thickness(1);
+                    b.Opacity = 0.8;
                     Grid.SetRow(b, i);
                     Grid.SetColumn(b, j);
                     b.Content = _grilleJeu._grille[i, j];
@@ -55,6 +57,9 @@ namespace BatailleNavaleGraphique
                                 B.Background = Brushes.Green;
                                 //B.Content = 0;
                                 _grilleJeu._grille[i2, j2] = 0;
+                                MediaPlayer mp = new MediaPlayer();
+                                mp.Open(new Uri("hit.mp3", UriKind.Relative));
+                                mp.Play();  
                                 VerifierBateau();
                                 VerifierPartie();
                             }
@@ -113,24 +118,36 @@ namespace BatailleNavaleGraphique
             {
                 MessageBox.Show("Porte-Avion coulé");
                 _grilleJeu.PaState = true;
+                MediaPlayer mp = new MediaPlayer();
+                mp.Open(new Uri("destroyed.mp3", UriKind.Relative));
+                mp.Play();
             }
 
             if (croiseur == 0 && _grilleJeu.CState != true)
             {
                 MessageBox.Show("Croiseur coulé");
                 _grilleJeu.CState = true;
+                MediaPlayer mp = new MediaPlayer();
+                mp.Open(new Uri("destroyed.mp3", UriKind.Relative));
+                mp.Play();
             }
 
             if (contre_torpilleur == 0 && _grilleJeu.CTState != true)
             {
                 MessageBox.Show("Contre-Torpilleur coulé");
                 _grilleJeu.CTState = true;
+                MediaPlayer mp = new MediaPlayer();
+                mp.Open(new Uri("destroyed.mp3", UriKind.Relative));
+                mp.Play();
             }
 
             if (torpilleur == 0 && _grilleJeu.TState != true)
             {
                 MessageBox.Show("Torpilleur coulé");
                 _grilleJeu.TState = true;
+                MediaPlayer mp = new MediaPlayer();
+                mp.Open(new Uri("destroyed.mp3", UriKind.Relative));
+                mp.Play();
             }
 
         }

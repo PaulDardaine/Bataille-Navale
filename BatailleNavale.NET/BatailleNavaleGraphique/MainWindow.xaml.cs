@@ -35,5 +35,10 @@ namespace BatailleNavaleGraphique
             this.Close();
         }
 
+        void Options_Click(object sender, RoutedEventArgs e)
+        {
+            Options Option = new Options();
+            Option.Show();
+        }
     }
 }

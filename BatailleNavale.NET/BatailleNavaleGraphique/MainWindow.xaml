@@ -5,12 +5,27 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BatailleNavaleGraphique"
         mc:Ignorable="d"
-        Title="Home" Height="450" Width="800">
-    <StackPanel>
-        <Label x:Name="Bienvenue" HorizontalAlignment="Center" VerticalAlignment="Center">Bienvenue</Label>
+        Title="Bataille Navale Pro 2.0" Height="450" Width="800">
 
-        <Button x:Name="NouvellePartie" Click="NewGame_Click">Nouvelle partie</Button>
-        <Button x:Name="ChargerPartie">Charger une partie</Button>
+    <Window.Resources>
+        <BitmapImage x:Key="Welcome" UriSource="welcome.png" />
+    </Window.Resources>
+    
+    <StackPanel>
+
+        <StackPanel.Background>
+            <ImageBrush ImageSource="wallpaper.jpg" />
+        </StackPanel.Background>
+
+        <!--
+        <Label x:Name="Bienvenue" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Old English Text MT">Bienvenue</Label>
+        -->
+        <Image Source="{StaticResource ResourceKey=Welcome}" />
+        
+        <Button x:Name="Options" Click="Options_Click" Height="40" Margin="0,0,600,0" Content="Options"/>
+        <Button x:Name="NouvellePartie" Click="NewGame_Click" Margin="600,0,0,0" Height="40" Content="Nouvelle partie"/>
+        <Button x:Name="ChargerPartie" Height="40" Margin="0,0,600,0" Content="Charger une partie"/>
+        
 
     </StackPanel>
 </Window>

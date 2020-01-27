@@ -35,3 +35,6 @@ C:\Users\pauld\Documents\ESSTIN-POLYTECH\5A\C#\Bataille-Navale\BatailleNavale.NE
 C:\Users\pauld\Documents\ESSTIN-POLYTECH\5A\C#\Bataille-Navale\BatailleNavale.NET\BatailleNavaleGraphique\obj\Debug\BatailleNavaleGraphique.csproj.CopyComplete
 C:\Users\pauld\Documents\ESSTIN-POLYTECH\5A\C#\Bataille-Navale\BatailleNavale.NET\BatailleNavaleGraphique\obj\Debug\BatailleNavaleGraphique.exe
 C:\Users\pauld\Documents\ESSTIN-POLYTECH\5A\C#\Bataille-Navale\BatailleNavale.NET\BatailleNavaleGraphique\obj\Debug\BatailleNavaleGraphique.pdb
+C:\Users\pauld\Documents\ESSTIN-POLYTECH\5A\C#\Bataille-Navale\BatailleNavale.NET\BatailleNavaleGraphique\obj\Debug\Options.g.cs
+C:\Users\pauld\Documents\ESSTIN-POLYTECH\5A\C#\Bataille-Navale\BatailleNavale.NET\BatailleNavaleGraphique\obj\Debug\Options.baml
+C:\Users\pauld\Documents\ESSTIN-POLYTECH\5A\C#\Bataille-Navale\BatailleNavale.NET\BatailleNavaleGraphique\obj\Debug\BatailleNavaleGraphique_Content.g.cs

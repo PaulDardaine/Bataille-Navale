@@ -1,0 +1,20 @@
+﻿<Window x:Class="BatailleNavaleGraphique.Options"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:BatailleNavaleGraphique"
+      mc:Ignorable="d" 
+      d:DesignHeight="225" d:DesignWidth="400"
+      Title="Options">
+
+    <StackPanel>
+
+        <StackPanel.Background>
+            <ImageBrush ImageSource="options.jpg" />
+        </StackPanel.Background>
+
+        <Label x:Name="Bienvenue" HorizontalAlignment="Center" FontFamily="Arial">Options</Label>
+        <Button x:Name="TailleGrille" Click="TailleGrille_Click" Height="40" VerticalAlignment="Bottom" Content="Valider"/>
+    </StackPanel>
+</Window>
