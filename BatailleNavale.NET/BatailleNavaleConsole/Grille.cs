@@ -89,11 +89,12 @@ namespace BatailleNavaleConsole
             else
             // Sinon on choisit un autre point tant qu'il est différent de 0
             {
-                do
+                while (_grille[ligneAleatoire, colonneAleatoire] != 0)
                 {
                     ligneAleatoire = aleatoire.Next(_lignes);
                     colonneAleatoire = aleatoire.Next(_lignes);
-                } while (_grille[ligneAleatoire, colonneAleatoire] != 0);
+                }
+                _grille[ligneAleatoire, colonneAleatoire] = b.taille;
             }
 
             #endregion
