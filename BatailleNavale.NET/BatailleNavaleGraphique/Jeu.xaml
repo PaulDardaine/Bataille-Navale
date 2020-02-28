@@ -7,7 +7,21 @@
         mc:Ignorable="d"    
         Title="Jeu" Height="auto" Width="auto">
 
+    <!-- 
+    <Window.Resources>
+        <ObjectDataProvider ObjectType="{x:Type local:Jeu}"
+                      MethodName="ShowCompteur" x:Key="showCompteur">
+            <ObjectDataProvider.MethodParameters>
+            </ObjectDataProvider.MethodParameters>
+        </ObjectDataProvider>
+        <local:Jeu x:Key="Jeu" />
+    </Window.Resources>
+    -->
+
     <Grid x:Name="gr">
+
+        <StackPanel/>
+        <!--    <Label Content="{Binding Source={StaticResource showCompteur}}" Grid.ColumnSpan="2" Grid.Row="9"/>  -->
 
         <Grid.Background>
             <ImageBrush ImageSource="wallpaper2.jpg" Stretch="UniformToFill"/>

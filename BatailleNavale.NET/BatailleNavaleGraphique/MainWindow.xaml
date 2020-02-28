@@ -24,7 +24,7 @@
         
         <Button Opacity="0.8" x:Name="Options" Click="Options_Click" Height="40" Margin="0,0,600,0" Content="Options"/>
         <Button Opacity="0.7" x:Name="NouvellePartie" Click="NewGame_Click" Margin="600,0,0,0" Height="40" Content="Nouvelle partie"/>
-        <Button Opacity="0.8"  x:Name="ChargerPartie" Height="40" Margin="0,0,600,0" Content="Charger une partie"/>
+        <Button Opacity="0.8"  x:Name="ChargerPartie" Click="Charger_Click" Height="40" Margin="0,0,600,0" Content="Charger une partie"/>
         
 
     </StackPanel>

@@ -1,0 +1,16 @@
+Documentation du code pour BatailleNavaleGraphique :
+
+Fonctionnalités implantées :
+
+- écran d'accueil & écran jeu
+- utilisateur prévenu si bateau touché ou coulé
+- message s'affiche si partie terminée
+- case sélectionnée se colore en vert ou rouge en fonction de la présence d'un bateau
+- fond d'écran et bruitages
+
+Fonctionnalités non implantées :
+
+- sauvegarde de la partie
+- menu d'option incomplet : devrait permettre la sélection de la taille de la grille par l'utilisateur
+- affichage d'un compteur de score & meilleurs scores
+

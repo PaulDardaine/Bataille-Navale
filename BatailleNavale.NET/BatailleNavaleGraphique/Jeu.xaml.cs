@@ -24,11 +24,13 @@ namespace BatailleNavaleGraphique
     {
 
         private Grille _grilleJeu;
+        private MediaPlayer mp = new MediaPlayer();
+        private int _compteurCoups = 0;
         public Jeu()
         {
             InitializeComponent();
 
-            _grilleJeu = new Grille(8);
+            _grilleJeu = new Grille(10);
 
             for(int i = 0; i < _grilleJeu._lignes; i++)
             {
@@ -39,7 +41,7 @@ namespace BatailleNavaleGraphique
                     b.Opacity = 0.8;
                     Grid.SetRow(b, i);
                     Grid.SetColumn(b, j);
-                    b.Content = _grilleJeu._grille[i, j];
+                    //b.Content = _grilleJeu._grille[i, j];
                     int i2 = i; int j2 = j;
 
                     b.Click += (o, e) =>
@@ -51,15 +53,17 @@ namespace BatailleNavaleGraphique
                             if (_grilleJeu._grille[i2,j2].Equals(0))
                             {
                                 B.Background = Brushes.Red;
+                                _compteurCoups++;
                             }
                             else
                             {
                                 B.Background = Brushes.Green;
+                                _compteurCoups++;
                                 //B.Content = 0;
                                 _grilleJeu._grille[i2, j2] = 0;
-                                MediaPlayer mp = new MediaPlayer();
                                 mp.Open(new Uri("hit.mp3", UriKind.Relative));
-                                mp.Play();  
+                                mp.Play();
+
                                 VerifierBateau();
                                 VerifierPartie();
                             }
@@ -71,6 +75,12 @@ namespace BatailleNavaleGraphique
             }
         }
 
+        private String ShowCompteur() 
+        {
+            string cc = _compteurCoups.ToString();
+            return cc;
+        }
+               
         private void VerifierPartie()
         {
             if (_grilleJeu.CState && _grilleJeu.TState && _grilleJeu.PaState && _grilleJeu.CTState)
@@ -118,7 +128,6 @@ namespace BatailleNavaleGraphique
             {
                 MessageBox.Show("Porte-Avion coulé");
                 _grilleJeu.PaState = true;
-                MediaPlayer mp = new MediaPlayer();
                 mp.Open(new Uri("destroyed.mp3", UriKind.Relative));
                 mp.Play();
             }
@@ -127,7 +136,6 @@ namespace BatailleNavaleGraphique
             {
                 MessageBox.Show("Croiseur coulé");
                 _grilleJeu.CState = true;
-                MediaPlayer mp = new MediaPlayer();
                 mp.Open(new Uri("destroyed.mp3", UriKind.Relative));
                 mp.Play();
             }
@@ -136,7 +144,6 @@ namespace BatailleNavaleGraphique
             {
                 MessageBox.Show("Contre-Torpilleur coulé");
                 _grilleJeu.CTState = true;
-                MediaPlayer mp = new MediaPlayer();
                 mp.Open(new Uri("destroyed.mp3", UriKind.Relative));
                 mp.Play();
             }
@@ -145,7 +152,6 @@ namespace BatailleNavaleGraphique
             {
                 MessageBox.Show("Torpilleur coulé");
                 _grilleJeu.TState = true;
-                MediaPlayer mp = new MediaPlayer();
                 mp.Open(new Uri("destroyed.mp3", UriKind.Relative));
                 mp.Play();
             }

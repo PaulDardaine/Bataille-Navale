@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,7 +18,8 @@ namespace BatailleNavaleGraphique
 {
     public partial class MainWindow : Window
     {
-        public MainWindow()
+
+                public MainWindow()
         {
             InitializeComponent();
             this.Closing += new System.ComponentModel.CancelEventHandler(MainWindow_Closing);
@@ -40,5 +42,19 @@ namespace BatailleNavaleGraphique
             Options Option = new Options();
             Option.Show();
         }
-    }
+
+        void Charger_Click(object sender, RoutedEventArgs e)
+        {
+            MediaPlayer mp = new MediaPlayer();
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "MP3 files (*.mp3)|*.mp3|All files (*.*)|*.*";
+            if (openFileDialog.ShowDialog() == true)
+            {
+                mp.Open(new Uri(openFileDialog.FileName));
+                mp.Play();
+            }
+        }
+
+        
+}
 }
